@@ -1,33 +1,40 @@
 
 
-const hexnumber=[0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+let count=0;
 
-const btn=document.getElementById('btn');
+const value=document.querySelector('#value');
 
-const color=document.querySelector('.color');
-
-btn.addEventListener('click', function(){
-    
-    var hexcolor='#';
-
-    console.log(hexcolor);
-
-    var randNume=randNum();
-
-    for (var i=0; i<6; i++){
-        hexcolor +=hexnumber[randNume];
-       // console.log(hexcolor)
-    }
-
-    color.textContent=hexcolor;
-    document.body.style.backgroundColor=hexcolor;
-});
+const btns=document.querySelectorAll('.btn');
 
 
-function randNum(){
-    
-    numb=Math.floor(Math.random()*hexnumber.length);
+btns.forEach(function(item){
+    item.addEventListener('click',function(e){
+        //e represent a single btn
+        var style=e.currentTarget.classList;
 
-    return numb;
-}
+        if (style.contains('decrease')){
 
+            count--;
+            value.textContent=count;
+            value.style.color='red';
+
+        }
+        else if (style.contains('increase')){
+            count++;
+
+            if(count <= 5){
+                value.textContent=count;
+                value.style.color='red';
+            } else{
+                value.textContent=count;
+                value.style.color='green';  
+            }
+
+        }
+        else{
+            count=0
+            value.textContent=count
+        }
+
+    })
+})
