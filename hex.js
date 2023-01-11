@@ -1,23 +1,14 @@
 
 
-const toggle = document.querySelector('.nav-toggle');
+const modalbtn = document.querySelector('.modal-btn');
+const closebtn= document.querySelector('.close-btn');
+const overlayBtn= document.querySelector('.modal-overlay');
 
-const links =document.querySelector('.links');
+modalbtn.addEventListener('click',function(){
+    overlayBtn.classList.add('open-modal');
+});
 
 
-toggle.addEventListener('click', function(){
-   //console.log('hey');
-
-   //if (links.classList.contains('show-links')){
-    // in the links class list we are removing the show-links class
-//         links.classList.remove('show-links')
-//    }else{
-
-//     links.classList.add('show-links')
-//    }
-
-// in the shortest way we use the toggle methode 
-// this one will do the operation 
-
-links.classList.toggle('show-links')
+closebtn.addEventListener('click',function(){
+    overlayBtn.classList.remove('open-modal')
 })

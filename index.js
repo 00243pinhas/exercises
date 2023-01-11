@@ -1,20 +1,17 @@
-const toggle = document.querySelector('.sidebar-toggle');
 
-const closBarre= document.querySelector('.close-btn');
+const openbtn= document.querySelector(".modal-btn")
 
-const sidebar= document.querySelector('.sidebar');
+const Closbtn=document.querySelector('.close-btn');
 
-
-toggle.addEventListener('click',function(){
- 
-  if (sidebar.classList.contains('show-sidebar')){
-    sidebar.classList.remove('show-sidebar')
-  }else{
-    sidebar.classList.add('show-sidebar')
-  }
-});
+const ModeOverlay=document.querySelector('.modal-overlay');
 
 
-closBarre.addEventListener('click',function(){
-  sidebar.classList.remove('show-sidebar')
+
+openbtn.addEventListener('click',function(){
+    ModeOverlay.classList.add('open-modal')
 })
+
+Closbtn.addEventListener('click',function(){
+    ModeOverlay.classList.remove('open-modal')
+})
+
