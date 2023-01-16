@@ -1,14 +1,12 @@
 
 
-const modalbtn = document.querySelector('.modal-btn');
-const closebtn= document.querySelector('.close-btn');
-const overlayBtn= document.querySelector('.modal-overlay');
 
-modalbtn.addEventListener('click',function(){
-    overlayBtn.classList.add('open-modal');
-});
+const AllBtn = document.querySelectorAll('.question-btn');
 
+AllBtn.forEach(function(item){
+    item.addEventListener('click',function(e){
+        const Btn = e.currentTarget.parentElement.parentElement;
 
-closebtn.addEventListener('click',function(){
-    overlayBtn.classList.remove('open-modal')
+        Btn.classList.toggle('show-text')
+    })
 })

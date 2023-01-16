@@ -1,17 +1,27 @@
+// const Qbtn1=document.querySelector('.question-btn');
 
-const openbtn= document.querySelector(".modal-btn")
+// const Qbtn2=document.querySelector('.question-btn2');
 
-const Closbtn=document.querySelector('.close-btn');
-
-const ModeOverlay=document.querySelector('.modal-overlay');
-
+// const Qtn3= document.querySelector('.')
 
 
-openbtn.addEventListener('click',function(){
-    ModeOverlay.classList.add('open-modal')
-})
+// const btns=document.querySelectorAll('.question-btn');
 
-Closbtn.addEventListener('click',function(){
-    ModeOverlay.classList.remove('open-modal')
-})
+
+//const Qbtn= document.querySelector('.question-text');
+
+// btns.forEach(function(item){
+//     item.addEventListener('click',function(e){
+//         //const question=
+//     const question=e.currentTarget.parentElement.parentElement
+
+//     question.classList.toggle('show-text')
+//     })
+// })
+
+
+// traverssing method 
+// tomorrow we will use the selector method
+
+
 
